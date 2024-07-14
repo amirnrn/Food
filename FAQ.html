@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/9b01d014d7.js" crossorigin="anonymous"></script>
+<style>
+body{
+    margin : 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("img/banner-7\ croped.png") no-repeat;
+    background-size: 100% 500px;
+}    
+img{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    border: 1px solid transparent;
+    height: 120px;  
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.header > .left-menu{
+    border: 1px solid transparent;
+    height: 30px;
+    width: 300px;
+    position: relative;
+    top: 70px;
+    right: 100px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.header > .left-menu > .item{
+    float: left;
+    line-height:30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.header > .left-menu > .item > .item-child{
+    border: 1px solid transparent;
+    height: 70px;
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    background:#DDD6C5 ;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item:hover > .item-child{
+    top: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+.header > .left-menu > .item > .item-child > .item-child-child{
+    margin: 4px 10px;
+    color: #777;
+    font-weight: 500;
+}
+.header > .left-menu > .item > .item-child > .item-child-child > a{
+    color: #777;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item > .item-child > .item-child-child:hover > a{
+    color: #000;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2{
+    margin: -3px 10px;
+    color: #777;
+    
+    font-weight: 500;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2 > a{
+    color: #777;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2:hover > a{
+    color: #000;
+}
+.header > .left-menu > .item > a{
+    color: #000;
+}
+.header > .logo{
+    border: 1px solid transparent;
+    height: 85px;
+    width: 170px;
+    margin: 30px 0;
+}
+.header > .right-menu{
+    border: 1px solid transparent;
+    height: 30px;
+    width: 300px;
+    position: relative;
+    top: 70px;
+    left: 100px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.header > .right-menu > .item{
+    float: left;
+    line-height:30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.header > .right-menu > .item > a{
+    color: #000;
+}
+.header > .right-menu > .item > .blog-tag-a{
+    color: #000;
+}
+.header > .right-menu > .plan{
+    background: #BDD748;
+    padding: 0 10px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.header > .right-menu > .plan:hover{
+    background: #cfe95e;
+}
+.header > .right-menu > .plan > a{
+    color: black;
+}
+.container{
+    border: 1px solid transparent;
+    height: 1330px;
+}
+.container > .title{
+    height: fit-content;
+    padding: 115px 150px;
+    font-family: Segoe Print;
+    font-size: 55px;
+    font-weight: 900;
+}
+.container > .s1{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.container > .s1 > .title{
+    font-size: 22px;
+    font-weight: 500;
+    width: 800px;
+    position: relative;
+    left: 150px;
+    margin-top: 30px;
+}
+.container > .s1 > .text{
+    width: 900px;
+    position: relative;
+    left: 150px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.container > .s1 > .text{
+    width: 900px;
+    position: relative;
+    left: 170px;
+    margin-top: 30px;
+}
+.container > .s1 > .text-at-the-bottom{
+    width: 900px;
+    position: relative;
+    left: 190px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+.container > .s1 > .text-at-the-bottom > a{
+    color: #f7ab91;
+}
+.foter{
+    height: 300px;
+    background: #3e4140;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foter > .icons{
+    height: 50px;
+    width: 250px;
+    margin: 0px auto;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+}
+.foter > .icons > .icons-child{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background: #eee;
+    margin: 0 10px;
+    color: #3e4140;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+.foter > .icons > .icons-child:hover{
+    transform: scale(1.2);
+}
+.foter > .lower-than-icons{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    bottom: 70px;
+}
+.foter > .lower-than-icons > a{
+    color: rgba(230, 230, 230 , 0.7);
+    text-decoration: none;
+    margin: 0 20px;
+    transition: all 0.2s;
+}
+.foter > .lower-than-icons > a:hover{
+    color: rgba(255, 255, 255,1);
+}
+.foter > .the-lowest-element {
+    position: absolute;
+    bottom: 30px;
+    color: #eee;
+}
+.foter > .the-lowest-element > a{
+    color: #f7ab91;
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="left-menu">
+            <div class="item">About us
+                <div class="item-child">
+                    <div class="item-child-child"><a href="what a perfect plate.html">What's a Perfect Plate ?</a></div>
+                    <div class="item-child-child2"><a href="about us.html">About us</a></div>
+                </div>
+            </div>
+            <div class="item"><a href="How it works.html">How it Works</a></div>
+            <div class="item"><a href="FAQ.html">FAQ</a></div>
+        </div>
+        <div class="logo">
+            <img src="img/logo.png">
+        </div>
+        <div class="right-menu">
+            <div class="item"><a href="blog.html" class="blog-tag-a">Blog</a></div>
+            <div class="item"><a href="contactus.html">Content</a></div>
+            <div class="item plan"><a href="Choose a plan.html">Choose a Plan</a></div>
+        </div>
+    </div>  
+<div class="container">
+    <div class="title">Frequently Asked Questions</div>
+<section class="s1">
+    <div class="title">What’s A Perfect Plate?</div>
+    <div class="text">A Perfect Plate is a service that connects you and your family to a personal chef at a fraction of the cost.  This service allows you the flexibility of having one or multiple meals cooked at your location of choice. </div>
+
+    <div class="title">How it works?</div>
+    <div class="text">It’s simple!  Choose a plan, select your chef (or we can assign one) and choose your date and time. That’s it!!!  You can now sit back and relax.</div>
+
+    <div class="title">Will my chef provide the ingredients</div>
+    <div class="text">The beauty of A Perfect Plate is that your chef will use what you currently have in your pantry, your kitchen, and spice rack to prepare the meal. You are paying simply for their service and time.  So continue your grocery shopping as normal and keep your same pots and pans.*  Our chefs will whip up a delicious meal for you and create and unforgettable experience.
+
+        If you want to try something new, our chef’s will be happy to oblige. They may recommend additional ingredients that you may need to purchase for your experience.</div>
+
+    <div class="title">Are there any special items I need in order to use A Perfect Plate?</div>
+    <div class="text">No. Your chef knows their way around a kitchen and provided the opportunity, yours as well.  There are a few basic requirements that you will need.  Please see our Client Kitchen Code  for more details. </div>
+
+    <div class="title">Are there chefs that can prepare meals for those with allergies, special dietary restrictions or have particular taste and experience requirements?</div>
+    <div class="text">Yes. Your chef is highly trained and well tested to deliver quality meals to you and your guests with all needs in mind.  Just them let know.
+
+       <br><br> *Please see the Client Kitchen Code that provides details of basic needs for your kitchen.</div>
+
+        <br><br><br><div class="text-at-the-bottom">For more information, please <a href="contactus.html">contact us</a>.</div>
+    </section>
+</section>
+</div>
+
+<div class="foter">
+        <div class="icons">
+            <div class="icons-child ic1">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="icons-child ic2">
+                <i class="fab fa-pinterest-p"></i>
+            </div>
+            <div class="icons-child ic3">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="icons-child ic4">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="lower-than-icons">
+            <a href="#">BECOME A CHEF</a>
+            <a href="#">BOOK NOW</a>
+        </div>
+        <div class="the-lowest-element">
+            © 2021 A Perfect Plate. All rights reserved. Site by <a href="#">Knapsack</a>.
+        </div>  
+</div>  
+</body>
+</html>

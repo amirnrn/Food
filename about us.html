@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/9b01d014d7.js" crossorigin="anonymous"></script>
+<style>
+body{
+    margin : 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("img/banner-7\ croped.png") no-repeat;
+    background-size: 100% 500px;
+}    
+img{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    border: 1px solid transparent;
+    height: 120px;  
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.header > .left-menu{
+    border: 1px solid transparent;
+    height: 30px;
+    width: 300px;
+    position: relative;
+    top: 70px;
+    right: 100px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.header > .left-menu > .item{
+    float: left;
+    line-height:30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.header > .left-menu > .item > .item-child{
+    border: 1px solid transparent;
+    height: 70px;
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    background:#DDD6C5 ;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item:hover > .item-child{
+    top: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+.header > .left-menu > .item > .item-child > .item-child-child{
+    margin: 4px 10px;
+    color: #777;
+    font-weight: 500;
+}
+.header > .left-menu > .item > .item-child > .item-child-child > a{
+    color: #777;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item > .item-child > .item-child-child:hover > a{
+    color: #000;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2{
+    margin: -3px 10px;
+    color: #777;
+    
+    font-weight: 500;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2 > a{
+    color: #777;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2:hover > a{
+    color: #000;
+}
+.header > .left-menu > .item > a{
+    color: #000;
+}
+.header > .logo{
+    border: 1px solid transparent;
+    height: 85px;
+    width: 170px;
+    margin: 30px 0;
+}
+.header > .right-menu{
+    border: 1px solid transparent;
+    height: 30px;
+    width: 300px;
+    position: relative;
+    top: 70px;
+    left: 100px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.header > .right-menu > .item{
+    float: left;
+    line-height:30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.header > .right-menu > .item > a{
+    color: #000;
+}
+.header > .right-menu > .item > .blog-tag-a{
+    color: #000;
+}
+.header > .right-menu > .plan{
+    background: #BDD748;
+    padding: 0 10px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.header > .right-menu > .plan:hover{
+    background: #cfe95e;
+}
+.header > .right-menu > .plan > a{
+    color: black;
+}
+.container{
+    border: 1px solid transparent;
+    height: fit-content;
+}
+.container > .title{
+    height: fit-content;
+    padding: 115px 150px;
+    font-family: Segoe Print;
+    font-size: 55px;
+    font-weight: 900;
+}
+.container > .s1{
+    height: 500px;
+    display: flex;
+    position: relative;
+    top: 50px;
+    flex-direction: column;
+}
+.container > .s1 > .title{
+    height: fit-content;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 80px;
+    margin-top: 20px;
+}
+.container > .s1 > .item{
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > .s1 > .item > .item-child{
+    height: 250px;
+    width: 360px;
+    margin:0 15px;
+}
+.container > .s1 > .item > .item-child > .image{
+    height: 97px;
+    width: 340px;
+    margin: 0 auto;
+}
+.container > .s1 > .item > .item-child > .title{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 80px;
+    text-align: center;
+}
+.container > .s1 > .item > .item-child > .text{
+    font-size: 18px;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.container > .s2{
+    height: 1002px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(img/Banner-5.jpg);
+    background-size: 100% 100%;
+}
+.container > .s2 > .our-story{
+    height: 90%;
+    width: 600px;
+    position: relative;
+    right: 80px;
+}
+.container > .s2 > .our-story > .title{
+    height: fit-content;
+    font-size: 30px;;
+    font-weight: 500;
+    line-height: 80px;
+    margin-top: 20px;
+}
+.container > .s2 > .our-story > .text{
+    font-size: 18px;
+}
+.container > .s2 > .our-story > .Signature{
+    height: fit-content;
+    width: fit-content;
+}
+.container > .s2 > .our-story > .Signature > .image{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    bottom: 35px;
+}
+.container > .s2 > .our-story > .Signature > .text{
+    position: absolute;
+    bottom: 0;
+    font-weight: 500;
+    font-size: 18px;
+}
+.container > .s2 > .imagetext{
+    height: 90%;
+    width: 340px;
+    position: relative;
+    left: 80px;
+}
+.container > .s2 > .imagetext{
+    height: fit-content;
+    width: 340px;
+    margin-top: 50px;
+}
+.container > .s2 > .imagetext> .top{
+    height: 426px;
+    width: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container > .s2 > .imagetext> .bottom{
+    height: fit-content;
+    margin-top: 30px;
+    background: #f9a990;
+    border-radius: 10px;
+    color: #fff;
+    line-height: 30px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container > .s2 > .imagetext > .bottom > p{
+    width: 270px;
+    font-weight: 500;
+}
+.foter{
+height: 300px;
+background: #3e4140;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.foter > .icons{
+    height: 50px;
+    width: 250px;
+    margin: 0px auto;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+}
+.foter > .icons > .icons-child{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background: #eee;
+    margin: 0 10px;
+    color: #3e4140;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+.foter > .icons > .icons-child:hover{
+    transform: scale(1.2);
+}
+.foter > .lower-than-icons{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    bottom: 70px;
+}
+.foter > .lower-than-icons > a{
+    color: rgba(230, 230, 230 , 0.7);
+    text-decoration: none;
+    margin: 0 20px;
+    transition: all 0.2s;
+}
+.foter > .lower-than-icons > a:hover{
+    color: rgba(255, 255, 255,1);
+}
+.foter > .the-lowest-element {
+    position: absolute;
+    bottom: 30px;
+    color: #eee;
+}
+.foter > .the-lowest-element > a{
+    color: #f7ab91;
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="left-menu">
+            <div class="item">About us
+                <div class="item-child">
+                    <div class="item-child-child"><a href="what a perfect plate.html">What's a Perfect Plate ?</a></div>
+                    <div class="item-child-child2"><a href="about us.html">About us</a></div>
+                </div>
+            </div>
+            <div class="item"><a href="How it works.html">How it Works</a></div>
+            <div class="item"><a href="FAQ.html">FAQ</a></div>
+        </div>
+        <div class="logo">
+            <img src="img/logo.png">
+        </div>
+        <div class="right-menu">
+            <div class="item"><a href="blog.html" class="blog-tag-a">Blog</a></div>
+            <div class="item"><a href="contactus.html">Content</a></div>
+            <div class="item plan"><a href="Choose a plan.html">Choose a Plan</a></div>
+        </div>
+    </div>   
+<div class="container">
+    <div class="title">About Us</div>
+<section class="s1">
+        <div class="title">Our Values</div>
+        <div class="item">
+            <div class="item-child">
+                <div class="image">
+                    <img src="img/basket.png">
+                </div>
+                <div class="title">
+                    Service
+                </div>
+                <div class="text">
+                    To deliver an elevated level of service to our clients in a fun and respectful way. 
+                </div>
+            </div>
+                <div class="item-child">
+                    <div class="image">
+                        <img src="img/home.png">
+                    </div>
+                    <div class="title">
+                        Trust
+                    </div>
+                    <div class="text">
+                        To create a trustworthy relationship that is built on respect, honesty and dependability.
+                    </div>
+                </div>
+                <div class="item-child">
+                    <div class="image">
+                        <img src="img/hearts.png">
+                    </div>
+                    <div class="title">
+                        Love
+                    </div>
+                    <div class="text">
+                        And to meet the needs of our clients in a skillful way that shows the love we have for our purpose — to serve others.
+                    </div>
+                </div>
+        </div>
+</section>
+<section class="s2">
+    <div class="our-story">
+        <div class="title">Our Story</div>
+        <div class="text">I grew up loving food and meal preparation.   Whether it was watching my Grandmother, Mom, and Aunties prepare meals on Thanksgiving, celebrating our family in a big way, or something small like Sunday dinners, there was something there that brought me in from outside playing and being in awe in of what was happening in the kitchen. It may have been the multiple conversations, and that super loud Uncle who was always the life of the party.  It may have been the way my Grandmother gathered her own vegetables from her garden and washed and bathed them like they were her own children.  Nonetheless, I was simply amazed with the process and in love with the meals that graced the table. I waited for the day I could repeat those cherished traditions with my own family.
+
+            I took the traditional approach  of college and odd jobs and through bumps and bruises, I now sit in a cubicle. Boring I know, but it gets better. Nothing helped me satisfy that ultimate need of serving and helping until A Perfect Plate was born.
+            
+            With A Perfect Plate, I was able to utilize my love for my family and food, my passion for cooking, and the ability to meet exciting people who shared the same purpose - to SERVE!  And what better way to serve than to allow them the opportunity to create their own traditions. 
+            
+            What I would have given to have A Perfect Plate in my life through various transitions (raising children, taking care of parents, and my constant health journey to name a few☺). But there are many “ME’s” out there now that A Perfect Plate was born to help.</div>
+    
+    
+
+            <div class="Signature">
+                <div class="image">
+                    <img src="img/Signature.png">
+                </div>
+                <div class="text">Niki Finch, Founder</div>
+            </div>
+    </div>
+            <div class="imagetext">
+                <div class="top">
+                    <img src="img/96-IMG_9901.jpg">
+                </div>
+                <div class="bottom"><p>“We make this service affordable by using your pre-purchased ingredients.”
+                   <br><br> — NIKI FINCH, FOUNDER</p></div>
+            </div>
+
+</section>
+</div>
+<div class="foter">
+        <div class="icons">
+            <div class="icons-child ic1">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="icons-child ic2">
+                <i class="fab fa-pinterest-p"></i>
+            </div>
+            <div class="icons-child ic3">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="icons-child ic4">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </div>
+        <div class="lower-than-icons">
+            <a href="#">BECOME A CHEF</a>
+            <a href="#">BOOK NOW</a>
+        </div>
+        <div class="the-lowest-element">
+            © 2021 A Perfect Plate. All rights reserved. Site by <a href="#">Knapsack</a>.
+        </div>  
+</div>  
+</body>
+</html>

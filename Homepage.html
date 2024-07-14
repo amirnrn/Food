@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/9b01d014d7.js" crossorigin="anonymous"></script>
+<style>
+body{
+    margin : 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("img/Banner1.png") no-repeat;
+    background-size: 100% 600px;
+}    
+img{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    border: 1px solid transparent;
+    height: 120px;  
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.header > .left-menu{
+    border: 1px solid transparent;
+    height: 30px;
+    width: 300px;
+    position: relative;
+    top: 70px;
+    right: 100px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.header > .left-menu > .item{
+    float: left;
+    line-height:30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.header > .left-menu > .item > .item-child{
+    border: 1px solid transparent;
+    height: 70px;
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    background:#DDD6C5 ;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item:hover > .item-child{
+    top: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+.header > .left-menu > .item > .item-child > .item-child-child{
+    margin: 4px 10px;
+    color: #777;
+    font-weight: 500;
+}
+.header > .left-menu > .item > .item-child > .item-child-child > a{
+    color: #777;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item > .item-child > .item-child-child:hover > a{
+    color: #000;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2{
+    margin: -3px 10px;
+    color: #777;
+    
+    font-weight: 500;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2 > a{
+    color: #777;
+    transition: all 0.2s;
+}
+.header > .left-menu > .item > .item-child > .item-child-child2:hover > a{
+    color: #000;
+}
+.header > .left-menu > .item > a{
+    color: #000;
+}
+.header > .logo{
+    border: 1px solid transparent;
+    height: 85px;
+    width: 170px;
+    margin: 30px 0;
+}
+.header > .right-menu{
+    border: 1px solid transparent;
+    height: 30px;
+    width: 300px;
+    position: relative;
+    top: 70px;
+    left: 100px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+.header > .right-menu > .item{
+    float: left;
+    line-height:30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.header > .right-menu > .item > a{
+    color: #000;
+}
+.header > .right-menu > .item > .blog-tag-a{
+    color: #000;
+}
+.header > .right-menu > .plan{
+    background: #BDD748;
+    padding: 0 10px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.header > .right-menu > .plan:hover{
+    background: #cfe95e;
+}
+.header > .right-menu > .plan > a{
+    color: black;
+}
+.container{
+    height:fit-content;
+}
+.container > .s1{
+    height: 575px;
+}
+.container > .s1 > .top{
+    height: 474px;
+    display: flex;
+    justify-content: center;
+}
+.container > .s1 > .top > .left{
+    height: 574px;
+    width: 600px;
+}
+.container > .s1 > .top > .left > h1{
+    padding: 0;
+    margin: 40px 20px;
+    font-family: Segoe Print;
+    font-size: 55px;
+    font-weight: 900;
+}
+.container > .s1 > .top > .left > h5{
+    padding: 0;
+    margin:0px 20px;
+    position: relative;
+    bottom: 20px;
+    font-size: 20px;
+    width: 400px;
+    font-family: Segoe Print;
+    font-weight: 400;
+}
+.container > .s1 > .top > .left > .button{
+    height: 50px;
+    width: 200px;
+    margin: 0px 20px;
+    border-radius: 10px;
+    background: #BDD748;
+    text-align: center;
+    line-height: 45px;
+    font-weight: 600;
+    font-size: 19px;
+    transition: all 0.2s;
+    cursor: pointer; 
+}
+.container > .s1 > .top > .left > .button > a{
+    color :#000;
+}
+.container > .s1 > .top > .left > .button:hover{
+    background: #cfe95e;
+}
+.container > .s1 > .top > .right{
+    height: 400px;
+    width: 450px;
+}
+.container > .s1 > .bottom{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.container > .s1 > .bottom > .bottom-child{
+    height: 100px;
+    width: 520px;
+    margin: 0 2px;
+    float: left;
+    background: #ede7d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > .s1 > .bottom > .bottom-child > .icon{
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+}
+.container > .s1 > .bottom > .bottom-child > .text{
+    height: 20px;
+    font-weight: 500;
+}
+.container > .s2{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > .s2  > .left{
+    height: 450px;
+    width: 500px;
+    margin-right:50px;
+}
+.container > .s2 > .right{
+    height: 450px;
+    width: 400px;
+    
+}
+.container > .s2 > .right > .first{
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+    margin:30px;
+}
+.container > .s2 > .right > .second{
+    margin:30px;
+    text-align: left;
+    font-size: 17px;
+    line-height: 30px;
+}
+.container > .s2 > .right > .second{
+    margin:30px;
+    text-align: left;
+    font-size: 17px;
+    line-height: 30px;
+}
+.container > .s2 > .right > .button{
+    height: 50px;
+    width: 200px;
+    margin: 0 30px;
+    border-radius: 10px;
+    background: #f7ab91;
+    
+    text-align: center;
+    line-height: 45px;
+    font-weight: 600;
+    font-size: 19px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.container > .s2 > .right > .button:hover{
+    background: #f3b7a4;
+}
+.container > .s2 > .right > .button > a{
+    color : #fff; 
+
+}
+.container > .s3{
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f7f4ed;
+}
+.container > .s3 > .title{
+    height: 50px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    bottom: 30px;
+    font-weight: 500;
+}
+.container > .s3 > .item{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+}
+.container > .s3 > .item > .item-child{
+    height: 100%;
+    width: 350px;
+    margin: 0 15px;
+}
+.container > .s3 > .item > .item-child > .picture{
+    height: 300px;
+    width: 340px;
+    margin: 0 auto;
+}
+.container > .s3 > .item > .item-child > .title{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.container > .s3 > .item > .item-child > .text{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.container > .s3 > .button{
+    height: 50px;
+    width: 200px;
+    background: #BDD748;
+    text-align: center;
+    line-height: 45px;
+    font-weight: 600;
+    font-size: 19px;
+    transition: all 0.2s;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    bottom: 20px;
+}
+.container > .s3 > .button:hover{
+    background: #cfe95e;
+}
+.container > .s3 > .button > a{
+    color: #fff;
+}
+.container > .s4{
+    height: 520px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container > .s4 > .title{
+    height: 50px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    font-weight: 500;
+}
+.container > .s4 > .item{
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    position: relative;
+    top: 30px;
+}
+.container > .s4 > .item > .item-child{
+    height: fit-content;
+    width: 350px;
+    margin: 0 15px;
+    background: #f9a990;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    padding: 20px 0;
+}
+.container > .s4 > .item > .item-child > p{
+    width: 270px;
+    text-align: center;
+    margin: 0 auto;
+}
+.container > .s5{
+    height:500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('img/banner-mini2.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.container > .s5 > .title{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;  
+    position: relative;
+    bottom: 20px;
+}
+.container > .s5 > .item{
+    height: fit-content;
+    width: fit-content;
+}
+.container > .s5 > .item > .item-child{
+    height: 300px;
+    width: 220px;
+    float: left;
+    margin: 0 15px;
+    background: #fff;
+    position: relative;
+    top: 10px;
+    box-shadow: 1px 1px 10px 1px rgb(223, 223, 223);
+}
+.container > .s5 > .item > .item-child > .image{
+    height: 60px;
+    width: 100%;
+}
+.container > .s5 > .item > .item-child > .title{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 600;
+    line-height: 28px;
+}
+.container > .s5 > .item > .item-child > .text{
+    text-align: center;
+    padding-top: 20px;
+    line-height: 28px;
+    width: 180px;
+    margin: 0 auto;
+}
+.container > .s5 > .item > .item-child > a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+}
+.container > .s5 > .item > .item-child:nth-child(1) > a{
+    color: #89D7F7;
+}
+.container > .s5 > .item > .item-child:nth-child(2) > a{
+    color: #BDD748;
+}
+.container > .s5 > .item > .item-child:nth-child(3) > a{
+    color: #C8BDAB;
+}
+.container > .s5 > .item > .item-child:nth-child(4) > a{
+    color: #F6B39D;
+}
+.container > .s6{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+.container > .s6 > .item{
+    height: 260px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.container > .s6 > .item > .item-child{
+    height: fit-content;
+    width: 340px;
+    margin: 0 15px;
+}
+.container > .s6 > .item > .item-child > .image{
+    height: 90px;
+    width: 306px;
+    margin: 0 auto;
+}
+.container > .s6 > .item > .item-child > .title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 23px;
+    padding-top: 10px;
+}
+.container > .s6 > .item > .item-child > .text{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 20px;
+    width: 350px;
+}
+.container > .s6 > .text{
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    font-size: 17px;
+    position: relative;
+    top: 10px;
+}
+.container > .s6 > .text > a{
+    color: #f7ab91;
+}
+.container > .s6 > .button{
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
+    line-height: 45px;
+    position: relative;
+    top: 30px;
+    background: #BDD748;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.container > .s6 > .button:hover{
+    background: #cfe95e;
+}
+.foter{
+    height: 300px;
+    background: #3e4140;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.foter > .icons{
+    height: 50px;
+    width: 250px;
+    margin: 0px auto;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    top: 30px;
+}
+.foter > .icons > .icons-child{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background: #eee;
+    margin: 0 10px;
+    color: #3e4140;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+.foter > .icons > .icons-child:hover{
+    transform: scale(1.2);
+}
+.foter > .lower-than-icons{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    bottom: 70px;
+}
+.foter > .lower-than-icons > a{
+    color: rgba(230, 230, 230 , 0.7);
+    text-decoration: none;
+    margin: 0 20px;
+    transition: all 0.2s;
+}
+.foter > .lower-than-icons > a:hover{
+    color: rgba(255, 255, 255,1);
+}
+.foter > .the-lowest-element {
+    position: absolute;
+    bottom: 30px;
+    color: #eee;
+}
+.foter > .the-lowest-element > a{
+    color: #f7ab91;
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <div class="left-menu">
+        <div class="item">About us
+            <div class="item-child">
+                <div class="item-child-child"><a href="what a perfect plate.html">What's a Perfect Plate ?</a></div>
+                <div class="item-child-child2"><a href="about us.html">About us</a></div>
+            </div>
+        </div>
+        <div class="item"><a href="How it works.html">How it Works</a></div>
+        <div class="item"><a href="FAQ.html">FAQ</a></div>
+    </div>
+    <div class="logo">
+        <img src="img/logo.png">
+    </div>
+    <div class="right-menu">
+        <div class="item"><a href="blog.html" class="blog-tag-a">Blog</a></div>
+        <div class="item"><a href="contactus.html">Content</a></div>
+        <div class="item plan"><a href="Choose a plan.html">Choose a Plan</a></div>
+    </div>
+</div>  
+<div class="container">
+<section class="s1">
+    <div class="top">
+        <div class="left">
+            <h1>Discover a unique experience.</h1>
+            <h5>We bring professional chefs to your home to prepare delicious, customized meals at a fraction of the cost.</h5>
+            <div class="button">
+                <a href="Choose a plan.html">Choose a Plan</a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/girl-mom-grey-circle.png">
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-child">
+            <div class="icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="text"> Free up your time</div>
+        </div>
+        <div class="bottom-child">
+            <div class="icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="text"> Stop stressing about what to cook</div>
+        </div>
+        <div class="bottom-child">
+            <div class="icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="text"> Save money & reduce waste</div>
+        </div>
+    </div>
+</section>
+<section class="s2">
+    <div class="left">
+        <img src="img/chopping-vegetables.jpg">
+    </div>
+    <div class="right">
+        <p class="first">Sound familiar? <br> If so, this experience is for you.</p>
+        <p class="second">- You’re too busy to prepare meals<br>
+            - You want healthy, home-cooked meals<br>
+            - Meal delivery services are too expensive<br>
+            - You want to experience something different<br>
+            - You’d rather spend time with your family or doing something you love
+        </p>
+        <div class="button"><a href="Choose a plan.html">Choose a Plan</a></div>
+    </div>
+</section>
+<section class="s3">
+    <div class="title">Delicious meals prepared for you.</div>
+    <div class="item">
+        <div class="item-child">
+            <div class="picture">
+                <img src="img/chef-cutting-circle.png">
+            </div>
+            <div class="title">
+                Professional, talented chefs
+            </div>
+            <div class="text">
+                Our chefs are put through an in-depth interview process and testing. They are servsafe certified, insured and experienced.
+            </div>
+        </div>
+        <div class="item-child">
+            <div class="picture">
+                <img src="img/girl-laptop-circle.png">
+            </div>
+            <div class="title">Affordable plans</div>
+            <div class="text">Our goal is to give you a unique experience that will not break the bank.  </div>
+        </div>
+        <div class="item-child">
+            <div class="picture">
+                <img src="img/saladbowl-circle.png">
+            </div>
+            <div class="title">Flexible Options</div>
+            <div class="text">We can tailor this experience to suit your needs and those of your family. </div>
+        </div>
+    </div>
+    <div class="button"><a href="Choose a plan.html">Choose a  Plan</a></div>
+</section>
+<section class="s4">
+    <div class="title">People love their Perfect Plate</div>
+    <div class="item">
+        <div class="item-child">
+            <p>“I thoroughly enjoyed my home chef experience with
+                A Perfect Plate. My chef was very professional and respectful of my home, but most importantly the meal was absolutely delicious! I will definetly use A Perfect Plate again soon!”
+                <br><br>— RENEE SMITH</p>
+        </div>
+        <div class="item-child">
+            <p>“It was an amazing experience. It allowed me to actually enjoy dinner with my guest. My chef was kind and pleasant to work with and exceeded our expectations. The lamb chops were simply amazing!”
+                <br><br>— HEATHER DARCY</p>
+        </div>
+        <div class="item-child">
+            <p>“After several back surgeries, I needed help with simple task such as meal preparation. Standing for hours in the kitchen became tedious and painful. After being introduced to this by Niki, my world has changed. I can trust someone else to do it for me and I can get back to healing.”
+               <br><br> — JODI CHRYSTAL</p>
+        </div>
+    </div>
+</section>
+<section class="s5">
+    <div class="title">Simple Pricing</div>
+    <div class="item">
+        <div class="item-child">
+            <div class="image">
+                <img src="img/pot.jpg">
+            </div>
+            <div class="title">
+                Appetizer<br>
+$110 | 2 Hours
+            </div>
+            <div class="text">
+                Your personal chef will cook your meal for up to two (2) individuals.
+            </div>
+            <a href="#" class="item-child-a1">
+                Learn more
+            </a>
+        </div>
+        <div class="item-child">
+            <div class="image">
+                <img src="img/covered-plate.jpg">
+            </div>
+            <div class="title">
+                Entrée<br>
+$195 | 3 Hours
+            </div>
+            <div class="text">
+                Your personal chef will prepare your meals for up to five (5) individuals.
+            </div>
+            <a href="#">
+                Learn more
+            </a>
+        </div>
+        <div class="item-child">
+            <div class="image">
+                <img src="img/full-plate.jpg">
+            </div>
+            <div class="title">
+                A Perfect Plate<br>
+$375 | 4 Hours
+            </div>
+            <div class="text">
+                You personal chef will prepare meals for up to ten (10) individuals.
+            </div>
+            <a href="#">
+                Learn more
+            </a>
+        </div>
+        <div class="item-child">
+            <div class="image">
+                <img src="img/covered-plate (1).jpg">
+            </div>
+            <div class="title">
+                A Perfect Plate +<br>
+Custom Option
+            </div>
+            <div class="text">
+                Completely custom option for up to ten (10) individuals
+            </div>
+            <a href="#">
+                Learn more
+            </a>
+        </div>
+    </div>
+</section>
+<section class="s6">
+    <div class="item">
+        <div class="item-child">
+            <div class="image">
+                <img src="img/plate.png">
+            </div>
+            <div class="title">
+                1. Choose a plan
+            </div>
+            <div class="text">
+                Click the button below to choose your plan. From there, you can schedule your time on the calendar and choose your chef.
+            </div>
+        </div>
+        <div class="item-child">
+            <div class="image">
+                <img src="img/chef-hat.png">
+            </div>
+            <div class="title">2. Customize your meal</div>
+            <div class="text">Let your Chef know if you have an idea in mind or certain ingredients that you want to use. Shopping list included!</div>
+        </div>
+        <div class="item-child">
+            <div class="image">
+                <img src="img/cheers.png">
+            </div>
+            <div class="title">
+                3. Sit back & relax
+            </div>
+            <div class="text">
+                Your chef is ready to make this a unique experience for you so that you can get back to the things that matter.
+            </div>
+        </div>       
+    </div>
+    <div class="text">
+        Looking for more information? Visit our <a href="#">FAQ page</a> to learn more.
+    </div>
+    <a href="Choose a plan.html" class="button">
+        Choose a Plate
+    </a>  
+</section>
+</div>
+
+<div class="foter">
+    <div class="icons">
+        <div class="icons-child ic1">
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="icons-child ic2">
+            <i class="fab fa-pinterest-p"></i>
+        </div>
+        <div class="icons-child ic3">
+            <i class="fab fa-twitter"></i>
+        </div>
+        <div class="icons-child ic4">
+            <i class="fab fa-facebook-f"></i>
+        </div>
+    </div>
+    <div class="lower-than-icons">
+        <a href="#">BECOME A CHEF</a>
+        <a href="#">BOOK NOW</a>
+    </div>
+    <div class="the-lowest-element">
+        © 2021 A Perfect Plate. All rights reserved. Site by <a href="#">Knapsack</a>.
+    </div>  
+</div>
+
+</body>
+</html>
